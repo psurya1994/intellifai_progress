@@ -8,6 +8,9 @@
     - clean up
         - upload the full model (with vocab.json and config.json) [done]
         - handle the omegaconf environment issue
+            - option #1: update softvc to match 
+            - option #2: update xtts to match
+            - option #3: use seperate environments for both
         - reduce the print statements for xtts train and inference migs.
         - implement minimum and maximum audio limits
     - find minimum audio requirements (is 30 seconds enough?)
