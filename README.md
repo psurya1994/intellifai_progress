@@ -33,6 +33,8 @@ April 27:
                 - test: generate the new results with the same length reference audio.
             - hypothesis #3: difference in the model weights, or other optimizations. 
                 - this has been validated to be true by looking at the waveforms. The waveforms of our latest model are quite inline with original waveform, but the feb 1 model has a lot of deviation.
+            - hypothesis #4: this is coming from the difference in inference protocol.
+                - has been confirmed, used the feb1 checkpoint with apr24 and the results are the same.
 
 April 28:
 - Listening to models and making judgements. [done]
@@ -41,8 +43,30 @@ April 28:
         - surya_2: apr27 has unnecessary inflections.
 - We just need to revert to Feb 1 and make it live in the app.
     - clone into the repo and reproduce the results [done]
-    - generate the results for this model, and share for review [in progress]
-- We would have finalized hte models, and I can start working on the server implemntation.
+    - generate the results for this model, and share for review 
+        - jason, paul matches exactly - revert successful! yay!
+        - share the results for this model with jason. 
+    - make this the main model.
+- reobserving
+    - apr 27 vs feb 1
+        - paul_1: apr27 is better in terms of accent
+        - paul_2: apr27 is slightly better in terms of accent
+
+- Work on the server implementation 
+    - update the db to match Avtar's structure
+    - update softvc and xtts to match new codebase structure.
+
+April 29, plan:
+- confirm one of the models [done]
+- update the softvc and xtts models [done]
+    - implement regeneration (30 mins) [done]
+    - implement server prioritization (30 mins)
+    - implement resemble enhance for softvc (30 mins)
+    - finalize the server deployment side of things
+    - share gradio demos
+- plan for today:
+    - implement xtts and 
+- train the voices that Paul asked me to train
 
 Things to ask:
 - XTTS shared a default list of speakers, for their usecase. Let me know if we want to reuse any of them. Can share gradio demo to try out.
@@ -56,6 +80,10 @@ Things to ask:
 To mentioned to Paul: 
 - voice cloning is not a solved problem, we still do have issues with other accents. 
 - training guidance: if the voice quality is already good, don't use the resemble enhance.
+
+- clarification on XTTS
+-  
+- 
 
 
 ---
