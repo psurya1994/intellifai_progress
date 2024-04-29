@@ -1,11 +1,15 @@
 ### Things to do:
 
 - voice cloning quality improvements
-    - share softvc results, so that paul and jason can make a call. (30 mins)
+    - share softvc results, so that paul and jason can make a call. [done]
         - main concern: apr27 is not as great for Jason
-	- make quality improvements. 
 	- share the gradio server if they want to run their own training tests. 
 - voice cloning misc
+    - clean up
+        - upload the full model (with vocab.json and config.json) [done]
+        - handle the omegaconf environment issue
+        - reduce the print statements for xtts train and inference migs.
+        - implement minimum and maximum audio limits
     - find minimum audio requirements (is 30 seconds enough?)
         - for both xtts and softvc. run experiments and check.
     - share the .wav size, always upload .wav files.
@@ -17,7 +21,6 @@
 	- grafana visualization [Avtar]
 - gcp implementation for voice cloning
     - implement gcp as dedicated servers for voice cloning
-
 - talking head generation
 	- reproduce SyncTalk [Vishnu]
 	- DFL + SyncTalk [Anuj]
